@@ -14,9 +14,9 @@
         state: present
         update_cache: yes
 
-    - name: Install Sublime Text
+    - name: Install Sublime Text packages
       package:
-        name: sublime-text
+        name: '{{ sublime_text_packages }}'
         state: present
   become: yes
   tags: [sublime-text, packages] # FIXME Remove when this is fixed https://github.com/ansible/ansible/issues/30882
